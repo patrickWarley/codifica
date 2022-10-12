@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+
+
+  <title>Codifique sua mensagem!</title>
+</head>
+
+<body>
+  <div class="container center-container">
+    <div class="form center-container">
+      <form action="#" id="form">
+        <div class="inputgroup center-container">
+          <label for="mensagem">Mensagem</label>
+          <input type="text" name="mensagem" id="mensagem" required>
+        </div>
+        <div class="inputgroup">
+          <label for="cifracesar">Cifra de Cesar</label>
+          <input type="radio" id="cifracesar" name="codigo" value="cifracesar" checked>
+
+          <label for="base64">Base64</label>
+          <input type="radio" id="base64" name="codigo" value="base64">
+        </div>
+        <div class="inputgroup incr center-container">
+          <label for="incremento">Valor do incremento</label>
+          <input type="number" name="incremento" id="incremento" step="1" min="0" required>
+        </div>
+        <div class="center-container">
+          <input type="submit" class="submit-button" value="Codificar">
+          <input type="submit" class="submit-button" value="Decodificar">
+        </div>
+        <div class="inputgroup center-container">
+          <label for="mensagemCodificada">Mensagem codificada</label>
+          <input type="text" name="mensagemCodificada" id="mensagemCodificada" readonly>
+        </div>
+    </div>
+    </form>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
