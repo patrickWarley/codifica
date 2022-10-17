@@ -1,4 +1,4 @@
-var container = document.getElementById('containerSummary');
+var container = document.getElementsByClassName('summary')[0];
 var blanket2 = document.getElementsByClassName('blanket2')[0];
 
 container.addEventListener('mousemove', (evt) => {

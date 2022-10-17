@@ -14,13 +14,15 @@ const cifraCesar = (action, mensagem, incr, printout) => {
   let msg = mensagem.split('');
   var result = [];
   msg.forEach(char => {
-    let indexAlphabet = alphabet.indexOf(char);
+    let isUpperCase = char.toUpperCase() === char;
+
+    let indexAlphabet = alphabet.indexOf(char.toLowerCase());
 
     if (indexAlphabet === -1) result.push(char);
     else {
       //index do char codificado
       let indexCod = (indexAlphabet + parseInt(incr)) % 26;
-      result.push(alphabet[indexCod]);
+      result.push((isUpperCase ? alphabet[indexCod].toUpperCase() : alphabet[indexCod]));
     }
   });
 
