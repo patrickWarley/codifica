@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
+  <script src="https://kit.fontawesome.com/3842b7f66e.js" crossorigin="anonymous"></script>
   <title>Codifique sua mensagem!</title>
 </head>
 
@@ -50,37 +51,57 @@
       </div>
     </section>
     <section id="formEncoding" class="formEncoding">
-      <div class="container center-container">
-        <form action="#" id="form" class="form center-container">
-          <div class=" message-input">
+      <form action="#" id="form" class="form center-container">
+        <div class="container center-container">
+          <div class="commands">
+
+            <div class="inputgroup">
+              <label for="codigo">
+                <select name="codigo" id="codigo">
+                  <option value="cifracesar">Cifra de Cesar</option>
+                  <option value="base64" selected>Base64</option>
+                </select>
+            </div>
+            <div class="inputgroup incr center-container">
+              <label for="incremento">Valor do incremento</label>
+              <input type="number" name="incremento" id="incremento" step="1" min="0" placeholder="0">
+            </div>
+            <div class="inputgroup">
+              <label for="codifica">Codificar</label>
+              <input class="actionRadios" type="radio" id="codifica" name="action" value="codificar" checked onclick="">
+
+              <label for="decodifca">Decodificar</label>
+              <input class="actionRadios" type="radio" id="decodifica" name="action" value="decodificar">
+            </div>
+
+            <div class="center-container" style="z-index: 0;">
+              <input type="submit" class="submit-button" value="Codificar Mensagem!" id="submitButton">
+            </div>
+          </div>
+
+          <div class="message-input">
             <textarea name="mensagem" id="mensagem" required placeholder="Digite a sua mensagem..."></textarea>
             <textarea name="mensagemCodificada" id="mensagemCodificada" placeholder=">..." readonly></textarea>
           </div>
-          <div class="inputgroup">
-            <label for="codigo">
-              <select name="codigo" id="codigo">
-                <option value="cifracesar">Cifra de Cesar</option>
-                <option value="base64" selected>Base64</option>
-              </select>
-          </div>
-          <div class="inputgroup incr center-container">
-            <label for="incremento">Valor do incremento</label>
-            <input type="number" name="incremento" id="incremento" step="1" min="0" placeholder="0">
-          </div>
-          <div class="inputgroup">
-            <label for="codifica">Codificar</label>
-            <input class="actionRadios" type="radio" id="codifica" name="action" value="codificar" checked onclick="">
-
-            <label for="decodifca">Decodificar</label>
-            <input class="actionRadios" type="radio" id="decodifica" name="action" value="decodificar">
-          </div>
-          <div class="center-container">
-            <input type="submit" class="submit-button" value="Codificar Mensagem!" id="submitButton">
-          </div>
-        </form>
+        </div>
+      </form>
     </section>
   </main>
   <footer>
+    <footer class="pageend">
+      <div class="redesSocias">
+        <a class="" href="https://github.com/patrickWarley">
+          <i class="fa-brands iconredesfooter fa-github"></i>
+        </a>
+
+        <a class="" href="https://www.linkedin.com/in/patrick-warley-0b889537/">
+          <i class="fa-brands iconredesfooter fa-linkedin"></i>
+        </a>
+        <a class="" href="#header">
+          Voltar ao inicio
+        </a>
+      </div>
+    </footer>
   </footer>
   <script src="./js/index.js"></script>
   <script src="./js/animations.js"></script>

@@ -10,6 +10,8 @@
 :root {
   --green: #abff2e;
   --dark-gray: #333333;
+  --old-button: #DED0B3;
+  --old-pc: #81765D;
 }
 
 
@@ -80,12 +82,55 @@ a {
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 /*Formulario*/
 
+.form .submit-button {
+  margin-top: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px;
+  box-shadow: 10px 7px 24px 7px var(--dark-gray);
+  border-radius: 10px;
+  border: none;
+  background-color: var(--old-button);
+}
+
+.form .submit-button:hover {
+  background-color: var(--old-button);
+}
+
+.form .submit-button:active {
+  background-color: var(--old-pc);
+  transform: scale(0.9);
+}
+
+.commands {
+  height: 80%;
+  width: 20%;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .formEncoding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  background-image: url("../img/codebackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .message-input {
@@ -158,12 +203,14 @@ select {
 }
 
 .form {
-  width: 80%;
-  height: 90%;
-  background-color: var(--dark-gray);
-  color: white;
+  width: 70%;
+  height: 60%;
+  background-color: var(--old-button);
+  color: black;
   font-weight: 600;
   border-radius: 10px;
+
+  box-shadow: 5px 5px 15px 5px black;
 }
 
 .incr input[type="number"] {
@@ -296,6 +343,48 @@ section {
   padding: 10px;
   font-weight: bold;
   font-size: 2em;
+}
+
+
+/*footer*/
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+}
+
+.iconredesfooter {
+  padding: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+.iconredesfooter:hover {
+  font-size: 2.5em;
+}
+
+.pageend {
+  background-color: var(--dark-gray);
+}
+
+.redesSocias {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redesSocias a {
+  color: white;
+  font-weight: bold;
+}
+
+.redesSocias a:hover {
+  color: yellow;
+
 }
 
 @media(max-width:768px) {}
