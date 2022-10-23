@@ -5,45 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap');
-  </style>
   <title>Codifique sua mensagem!</title>
 </head>
 
 <body>
-  <section class="summary">
-    <div class="blanket1 center-container">
-      <div class="text-box top">
-        A Cifra de César é um tipo de cifra de substituição na qual cada letra do texto e substituida por outra abaixo
-        dela um numero fixo de vezes.
-        Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante.
-        O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.
+  <header class="header-top">
+    <nav class="main-nav">
+      <span class="logo"> PW.</span>
+      <ul class="menu">
+        <li><a href="#summary">Home</a></li>
+        <li> <a href="#formEncoding">Codificar Mensagem</a></li>
+        <li> <a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="summary">
+      <div class="blanket1 center-container">
+        <p class="text-box top">
+          A <span class="destaque">Cifra de César</span> é um tipo de cifra de substituição na qual cada letra do texto
+          e substituida por outra abaixo
+          dela um numero fixo de vezes.
+          Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante.
+          O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.
+        </p>
       </div>
-    </div>
-    <span class="btnCodifica"><a href="#formEncoding">Codifica!</a></span>
-    <div id="mouseOver"></div>
-    <div class="blanket2 center-container">
-      <div class="fixed-container center-container">
-        <div class="text-box bottom">
-          Base64 é um algoritmo de codificação (encoding) que permite transformar qualquer caractere de qualquer idioma
-          em um alfabeto que consiste em letras latinas, dígitos e sinais. Com isso podemos converter caracteres
-          especiais como os logogramas chineses, emoji e até imagens em uma sequência “legível” (para qualquer
-          computador), que pode ser salvo e/ou transferido para qualquer outro lugar.
-          É utilizado frequentemente para transmitir dados binários por meio de transmissões que lidam apenas com texto,
-          como, por exemplo, para enviar imagens e arquivos em anexo por e-mail.
+      <span class="btnCodifica"><a href="#formEncoding">Codifica!</a></span>
+      <div id="mouseOver"></div>
+      <div class="blanket2 center-container">
+        <div class="fixed-container center-container">
+          <p class="text-box bottom">
+            <span class="destaque">Base64</span> é um algoritmo de codificação (encoding) que permite transformar
+            qualquer caractere de qualquer
+            idioma
+            em um alfabeto que consiste em letras latinas, dígitos e sinais. Com isso podemos converter caracteres
+            especiais como os logogramas chineses, emoji e até imagens em uma sequência “legível” (para qualquer
+            computador), que pode ser salvo e/ou transferido para qualquer outro lugar.
+            É utilizado frequentemente para transmitir dados binários por meio de transmissões que lidam apenas com
+            texto,
+            como, por exemplo, para enviar imagens e arquivos em anexo por e-mail.
+          </p>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
-  <section id="formEncoding" class="formEncoding">
-    <div class="container center-container">
-      <div class="form center-container">
-        <form action="#" id="form">
-          <div class="inputgroup center-container">
-            <label for="mensagem">Mensagem</label>
-            <input type="text" name="mensagem" id="mensagem" required placeholder="Digite a sua mensagem...">
+      </div>
+    </section>
+    <section id="formEncoding" class="formEncoding">
+      <div class="container center-container">
+        <form action="#" id="form" class="form center-container">
+          <div class=" message-input">
+            <textarea name="mensagem" id="mensagem" required placeholder="Digite a sua mensagem..."></textarea>
+            <textarea name="mensagemCodificada" id="mensagemCodificada" placeholder=">..." readonly></textarea>
           </div>
           <div class="inputgroup">
             <label for="codigo">
@@ -66,14 +77,11 @@
           <div class="center-container">
             <input type="submit" class="submit-button" value="Codificar Mensagem!" id="submitButton">
           </div>
-          <div class="inputgroup center-container">
-            <label for="mensagemCodificada">Mensagem codificada</label>
-            <input type="text" name="mensagemCodificada" id="mensagemCodificada" readonly>
-          </div>
-      </div>
-      </form>
-    </div>
-  </section>
+        </form>
+    </section>
+  </main>
+  <footer>
+  </footer>
   <script src="./js/index.js"></script>
   <script src="./js/animations.js"></script>
 </body>

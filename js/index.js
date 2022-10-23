@@ -5,9 +5,11 @@ const incr = document.getElementById("incremento");
 const showMessage = document.getElementById("mensagemCodificada");
 const codigo = document.getElementById("codigo");
 
-var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const cifraCesar = (action, mensagem, incr, printout) => {
+
+  let alphabet = letters.slice();
 
   if (action === "decodificar") alphabet.reverse();
 
@@ -66,5 +68,8 @@ Array.from(radios).forEach(action => action.addEventListener('change', decideBut
 //add eventListener to codigo so we can show the increment input
 codigo.addEventListener('change', showIncrementInput);
 
+mensagem.addEventListener('input', () => {
+  showMessage.value = "";
+});
 
 form.addEventListener('submit', handleSubmit);
